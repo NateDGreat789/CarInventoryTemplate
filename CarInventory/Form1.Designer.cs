@@ -38,12 +38,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.removeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yearInput
             // 
             this.yearInput.Location = new System.Drawing.Point(129, 41);
-            this.yearInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yearInput.Margin = new System.Windows.Forms.Padding(4);
             this.yearInput.Name = "yearInput";
             this.yearInput.Size = new System.Drawing.Size(168, 22);
             this.yearInput.TabIndex = 0;
@@ -51,7 +52,7 @@
             // makeInput
             // 
             this.makeInput.Location = new System.Drawing.Point(129, 73);
-            this.makeInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.makeInput.Margin = new System.Windows.Forms.Padding(4);
             this.makeInput.Name = "makeInput";
             this.makeInput.Size = new System.Drawing.Size(168, 22);
             this.makeInput.TabIndex = 1;
@@ -59,7 +60,7 @@
             // colourInput
             // 
             this.colourInput.Location = new System.Drawing.Point(129, 105);
-            this.colourInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colourInput.Margin = new System.Windows.Forms.Padding(4);
             this.colourInput.Name = "colourInput";
             this.colourInput.Size = new System.Drawing.Size(168, 22);
             this.colourInput.TabIndex = 2;
@@ -67,7 +68,7 @@
             // mileageInput
             // 
             this.mileageInput.Location = new System.Drawing.Point(129, 137);
-            this.mileageInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mileageInput.Margin = new System.Windows.Forms.Padding(4);
             this.mileageInput.Name = "mileageInput";
             this.mileageInput.Size = new System.Drawing.Size(168, 22);
             this.mileageInput.TabIndex = 3;
@@ -75,9 +76,9 @@
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(129, 177);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(85, 28);
+            this.addButton.Size = new System.Drawing.Size(75, 28);
             this.addButton.TabIndex = 4;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
@@ -132,11 +133,23 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Mileage";
             // 
+            // removeButton
+            // 
+            this.removeButton.Location = new System.Drawing.Point(222, 177);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(75, 28);
+            this.removeButton.TabIndex = 10;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 450);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -147,7 +160,7 @@
             this.Controls.Add(this.colourInput);
             this.Controls.Add(this.makeInput);
             this.Controls.Add(this.yearInput);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Car Inventory";
             this.ResumeLayout(false);
@@ -167,6 +180,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button removeButton;
     }
 }
 

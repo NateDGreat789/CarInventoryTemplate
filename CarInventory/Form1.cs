@@ -30,9 +30,43 @@ namespace CarInventory
             Car newCar = new Car(year, make, colour, mileage);
             cars.Add(newCar);
 
-            for (int i = 0; i < cars.Count; i++)
+            //for (int i = 0; i < cars.Count; i++)
+            //{
+            //    outputLabel.Text += $"{cars[i].year}\n{cars[i].make}\n{cars[i].colour}\n{cars[i].mileage}";
+            //}
+
+            DisplayCars();
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < cars.Count; i++)
+            //{
+            //    if (cars[i].make == makeInput.Text)
+            //    {
+            //        cars.RemoveAt[i];
+            //    }
+            //}
+
+            foreach (Car c in cars)
             {
-                outputLabel.Text += $"{cars[i].year}\n{cars[i].make}\n{cars[i].colour}\n{cars[i].mileage}";
+                if (c.make == makeInput.Text)
+                {
+                    cars.Remove(c);
+                    break;
+                }
+            }
+            
+            DisplayCars();
+        }
+
+        private void DisplayCars()
+        {
+            outputLabel.Text = "";
+            
+            foreach (Car c in cars)
+            {
+                outputLabel.Text += $"{c.year} {c.make} {c.colour} {c.mileage}\n";
             }
         }
     }
